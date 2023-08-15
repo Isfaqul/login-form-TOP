@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <title>TOP login form</title>
+  </head>
+  <body>
+    <main>
+      <!-- Aside -->
+
+      <aside class="aside-container">
+        <img src="hero-img.png" alt="curry leaves" id="hero-img" />
+        <div class="floating-layer"></div>
+        <p class="img-credit">
+          Photo by <span class="underline">Isfaqul Hussain</span>
+        </p>
+      </aside>
+
+      <!-- Main section -->
+
+      <section class="main-content-container">
+        <div class="margin-left">
+          <h1 class="main-title">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started.
+          </h1>
+          <p class="sub-title">You <em class="italic">know</em> you want to.</p>
+        </div>
+
+        <!-- Form Starts here -->
+        <form action="#">
+          <div class="form-fields-container">
+            <div class="margin-left">
+              <h2 class="form-title">Let's sign up!</h2>
+
+              <!-- Input box grid container -->
+
+              <div class="input-box-grid-container">
+                <div class="form-input-item">
+                  <label for="first-name">First Name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required
+                  />
+                </div>
+
+                <div class="form-input-item">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" name="last-name" id="last-name" required />
+                </div>
+
+                <div class="form-input-item">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+
+                <div class="form-input-item">
+                  <label for="phone">Phone Number</label>
+                  <input type="number" name="phone" id="phone" required />
+                </div>
+
+                <div class="form-input-item">
+                  <label for="pwd">Password</label>
+                  <input type="password" name="pwd" id="pwd" required />
+                </div>
+
+                <div class="form-input-item">
+                  <label for="confirm-pwd">Confirm Password</label>
+                  <input
+                    type="password"
+                    name="confirm-pwd"
+                    id="confirm-pwd"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="margin-left">
+            <button type="submit" class="btn">Create Account</button>
+            <p class="login-txt">
+              Already have an account? <a href="#" class="login-link">Log In</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
