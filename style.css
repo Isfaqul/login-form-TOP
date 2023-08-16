@@ -235,7 +235,7 @@ input::placeholder {
   main {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2.5em;
   }
 
   .img-container {
@@ -257,7 +257,7 @@ input::placeholder {
   }
   .main-content-container {
     width: 100vw;
-    padding: 0 2em 2em 2em;
+    padding: 0 5em 2em 5em;
   }
   .hero-title {
     font-size: 2.5rem;
