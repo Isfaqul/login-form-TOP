@@ -261,11 +261,18 @@ input::placeholder {
   }
   .hero-title {
     font-size: 2.5rem;
-    width: 70%;
+    width: 100%;
     margin-bottom: 0.7em;
+    min-width: 0;
   }
   .form-header {
     font-size: 2.1rem;
     margin-bottom: 1em;
+  }
+  label {
+    font-size: 1.1rem;
+  }
+  input {
+    font-size: 1.4rem;
   }
 }
