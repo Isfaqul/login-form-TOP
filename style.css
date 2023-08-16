@@ -102,6 +102,10 @@ main {
   align-content: center;
 }
 
+form {
+  padding-right: 2em;
+}
+
 .hero-title {
   font-size: 4rem;
   font-weight: 600;
@@ -178,7 +182,7 @@ input::placeholder {
   font-size: 1.6rem;
   font-weight: 500;
   padding: 0.8em 1.6em;
-  margin-top: 1.2em;
+  margin-top: 1.3em;
   margin-bottom: 0.5em;
 }
 
@@ -203,4 +207,65 @@ input::placeholder {
 
 .login-link:hover {
   text-decoration: underline;
+}
+
+.pwd-error {
+  color: var(--input-box-error-stroke);
+}
+
+.show-pwd-input-error {
+  border-left: 8px solid var(--input-box-error-stroke);
+  border-right: 1px solid var(--input-box-error-stroke);
+  border-top: 1px solid var(--input-box-error-stroke);
+  border-bottom: 1px solid var(--input-box-error-stroke);
+  color: var(--input-box-error-stroke);
+}
+
+.not-hoverable:hover,
+.not-hoverable:focus {
+  border-left: 8px solid var(--input-box-error-stroke);
+  border-right: 1px solid var(--input-box-error-stroke);
+  border-top: 1px solid var(--input-box-error-stroke);
+  border-bottom: 1px solid var(--input-box-error-stroke);
+  box-shadow: 0 0 0 1px var(--input-box-error-stroke);
+  color: var(--input-box-error-stroke);
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .img-container {
+    width: 100vw;
+    background-position: center;
+  }
+
+  .logo-container {
+    padding: 1em;
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .img-credit {
+    margin-top: 10em;
+    font-size: clamp(1.1vw, 1.4rem, 1.5vw);
+    font-weight: 300;
+    margin-bottom: 1.5em;
+  }
+  .main-content-container {
+    width: 100vw;
+    padding: 0 2em 2em 2em;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    width: 70%;
+    margin-bottom: 0.7em;
+  }
+  .form-header {
+    font-size: 2.1rem;
+    margin-bottom: 1em;
+  }
 }
