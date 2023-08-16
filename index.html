@@ -9,86 +9,81 @@
   </head>
   <body>
     <main>
-      <!-- Aside -->
-
-      <aside class="aside-container">
-        <img src="hero-img.png" alt="curry leaves" id="hero-img" />
-        <div class="floating-layer"></div>
-        <p class="img-credit">
-          Photo by <span class="underline">Isfaqul Hussain</span>
-        </p>
-      </aside>
-
-      <!-- Main section -->
-
-      <section class="main-content-container">
-        <div class="margin-left">
-          <h1 class="main-title">
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams. Sign up
-            now to get started.
-          </h1>
-          <p class="sub-title">You <em class="italic">know</em> you want to.</p>
+      <!-- Image Container -->
+      <section class="img-container">
+        <div class="logo-container">
+          <h2 class="logo-txt">Isfaqul</h2>
         </div>
+        <p class="img-credit">Photo by <em class="underline">Isfaqul</em></p>
+      </section>
+      <!-- Main Content -->
+      <section class="main-content-container">
+        <h1 class="hero-title">Crafting Digital Worlds Begins Here!</h1>
 
-        <!-- Form Starts here -->
-        <form action="#">
-          <div class="form-fields-container">
-            <div class="margin-left">
-              <h2 class="form-title">Let's sign up!</h2>
+        <div class="form-container">
+          <h2 class="form-header">Let's sign up!</h2>
+          <form action="#">
+            <div class="input-item-grid-container">
+              <div class="form-input-item">
+                <label for="fName">First Name</label>
+                <input
+                  type="text"
+                  id="fName"
+                  name="fName"
+                  placeholder="John"
+                  required
+                />
+              </div>
 
-              <!-- Input box grid container -->
+              <div class="form-input-item">
+                <label for="lName">last Name</label>
+                <input type="text" id="lName" name="lName" placeholder="Doe" />
+              </div>
 
-              <div class="input-box-grid-container">
-                <div class="form-input-item">
-                  <label for="first-name">First Name</label>
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    required
-                  />
-                </div>
+              <div class="form-input-item">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="abc@abc.com"
+                  required
+                />
+              </div>
 
-                <div class="form-input-item">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" name="last-name" id="last-name" required />
-                </div>
+              <div class="form-input-item">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="number"
+                  id="phone"
+                  name="phone"
+                  placeholder="00000-00000"
+                  required
+                />
+              </div>
 
-                <div class="form-input-item">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" required />
-                </div>
+              <div class="form-input-item">
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="confirm-pwd" required />
+              </div>
 
-                <div class="form-input-item">
-                  <label for="phone">Phone Number</label>
-                  <input type="number" name="phone" id="phone" required />
-                </div>
-
-                <div class="form-input-item">
-                  <label for="pwd">Password</label>
-                  <input type="password" name="pwd" id="pwd" required />
-                </div>
-
-                <div class="form-input-item">
-                  <label for="confirm-pwd">Confirm Password</label>
-                  <input
-                    type="password"
-                    name="confirm-pwd"
-                    id="confirm-pwd"
-                    required
-                  />
-                </div>
+              <div class="form-input-item">
+                <label for="confirm-pwd">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm-pwd"
+                  name="confirm-pwd"
+                  required
+                />
               </div>
             </div>
-          </div>
-          <div class="margin-left">
-            <button type="submit" class="btn">Create Account</button>
+
+            <button type="submit" class="submit-btn">Create account</button>
             <p class="login-txt">
               Already have an account? <a href="#" class="login-link">Log In</a>
             </p>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     </main>
   </body>

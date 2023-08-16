@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Megrim&family=Poppins:wght@400;700;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,176 +9,198 @@
 }
 
 :root {
-  --main-bg: #f7fffb;
+  --main-font: Lexend, sans-serif;
+  --logo-font: Megrim, sans-serif;
 
-  --form-field-bg: white;
+  --main-bg: #fffafe;
+  --logo-container: rgba(255, 255, 255, 0.1);
 
-  --main-txt: #263422;
-  --input-label: #3b5130;
-  --img-credit: rgba(255, 255, 255, 0.6);
+  --logo-txt: white;
+  --dark-blue-txt: #331c76;
+  --placeholder-txt: rgba(51, 28, 118, 0.25);
+  --input-label: rgba(231, 27, 142, 0.8);
+  --img-credit: rgba(255, 255, 255, 0.8);
 
-  --btn-bg: #3b5130;
-  --btn-hover-bg: #3f5733;
+  --btn-bg: rgba(231, 27, 142, 1);
+  --btn-hover-bg: rgba(236, 36, 150, 1);
+  --btn-active-bg: rgb(223, 16, 133);
   --btn-txt: white;
 
-  --input-box-stroke: rgba(59, 82, 48, 0.4);
-  --input-box-active: #3b5230;
-  --input-box-shadow: rgba(59, 82, 48, 0.25);
+  --input-box-stroke: rgba(51, 28, 118, 0.7);
+  --input-box-active: #331c76;
   --input-box-error-stroke: #e00101;
 
-  --login-txt: #3e3e3e;
-  --login-link: #3b5130;
+  --login-txt: rgba(51, 28, 118, 0.7);
+  --login-link: #331c76;
 }
 
 html {
-  font-family: Inter, sans-serif;
+  font-family: var(--main-font);
   font-size: 62.5%;
 }
 
 body {
-  background-color: var(--main-bg);
   min-height: 100vh;
+  background-color: var(--main-bg);
 }
 
 main {
   display: flex;
-}
-
-img {
-  display: block;
-}
-
-aside {
-  position: relative;
-  flex-shrink: 0;
-}
-
-#hero-img {
-  width: 100%;
-  max-width: 100%;
   height: 100vh;
+  gap: 8em;
+}
+
+.img-container {
+  background: url(hero.jpg);
+  width: 40vw;
   background-size: cover;
+  background-position: 80%;
+  display: grid;
+  align-content: space-between;
+  justify-items: center;
+}
+
+.logo-container {
+  background-color: var(--logo-container);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.2) inset,
+    0px -1px 1px 0px rgba(0, 0, 0, 0.3) inset,
+    0px 4px 41px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 2em;
+  margin-top: 10em;
+  width: 100%;
+}
+
+.logo-txt {
+  display: block;
+  font-family: var(--logo-font);
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  font-size: clamp(2vw, 6rem, 6vw);
+  text-transform: uppercase;
+  color: var(--logo-txt);
+  text-align: center;
+  letter-spacing: 0.1em;
 }
 
 .img-credit {
-  font-size: clamp(1.4vh, 1.4rem, 2vh);
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--img-credit);
+  font-size: clamp(1.1vw, 1.4rem, 1.2vw);
+  font-weight: 300;
+  margin-bottom: 1.5em;
 }
 
 .underline {
   text-decoration: underline;
+  font-style: normal;
 }
 
-.italic {
-  font-style: italic;
-}
+/* Main Section Styles */
 
-/* Main Section */
 .main-content-container {
-  width: 100%;
-  padding: 2em 0 2em 0;
+  width: 60vw;
   display: grid;
   align-content: center;
 }
 
-.main-title,
-.sub-title {
+.hero-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--dark-blue-txt);
+  width: 50%;
+  min-width: 30rem;
+  margin-bottom: 1.4em;
+}
+
+.form-header {
   font-size: 2.4rem;
   font-weight: 600;
-  max-width: 74rem;
-  color: var(--main-txt);
+  margin-bottom: 1.3em;
+  color: var(--dark-blue-txt);
 }
 
-.main-title {
-  line-height: 140%;
-}
-
-.sub-title {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.form-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--main-txt);
-  margin-bottom: 3rem;
-}
-
-.form-fields-container {
-  margin: 4em 0 3em 0;
-  padding: 3em 0;
-  background-color: var(--form-field-bg);
-  box-shadow: 0px 2px 20px 0px #b9e9d3b9;
-}
-
-/* Form Styling */
-
-.input-box-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 26rem);
-  row-gap: 3em;
-  column-gap: 9em;
+.form-input-item {
+  width: 100%;
+  max-width: 26em;
 }
 
 label {
+  display: block;
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: var(--input-label);
-  display: block;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.5em;
+  width: 100%;
 }
 
 input {
-  width: 100%;
-  font-family: Inter, sans-serif;
-  font-weight: 500;
-  font-size: 1.4rem;
-  padding: 0.6em;
-  border: 1px solid var(--input-box-stroke);
+  font-family: var(--main-font);
+  color: var(--dark-blue-txt);
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 0.6em 0.8em;
   outline: none;
-  border-radius: 0.4em;
+  width: 100%;
+  border-left: 8px solid var(--input-box-stroke);
+  border-right: 1px solid var(--input-box-stroke);
+  border-top: 1px solid var(--input-box-stroke);
+  border-bottom: 1px solid var(--input-box-stroke);
+  transition: 200ms ease-in-out;
 }
 
-.btn {
-  background-color: var(--btn-bg);
+input:hover,
+input:focus {
+  border-left: 8px solid var(--input-box-active);
+  border-right: 1px solid var(--input-box-active);
+  border-top: 1px solid var(--input-box-active);
+  border-bottom: 1px solid var(--input-box-active);
+  box-shadow: 0 0 0 1px var(--input-box-active);
+}
+
+input::placeholder {
+  color: var(--placeholder-txt);
+}
+
+.input-item-grid-container {
+  max-width: calc((26em * 2) + (2em * 4));
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2em;
+  row-gap: 2em;
+}
+
+.submit-btn {
+  font-family: var(--main-font);
+  cursor: pointer;
   color: var(--btn-txt);
-  font-family: Inter, sans-serif;
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-bg);
   font-size: 1.6rem;
   font-weight: 500;
-  padding: 0.8em 1.5em;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  margin-bottom: 0.7em;
+  padding: 0.8em 1.6em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
 }
 
-.btn:hover {
+.submit-btn:hover {
   background-color: var(--btn-hover-bg);
+}
+
+.submit-btn:active {
+  background-color: var(--btn-active-bg);
 }
 
 .login-txt {
   font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--main-txt);
+  color: var(--login-txt);
 }
 
 .login-link {
-  font-weight: 500;
   color: var(--login-link);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .login-link:hover {
   text-decoration: underline;
-}
-
-.margin-left {
-  margin-left: 9em;
 }
